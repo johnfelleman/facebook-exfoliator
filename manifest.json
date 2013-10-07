@@ -1,0 +1,21 @@
+{
+  "name": "facebook exfoliator",
+  "version": "1.0",
+  "description": "scrubs away unsightly ads",
+  "permissions" : [
+    "tabs"
+  ],
+  "icons" : {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "content_scripts": [
+	   {
+           "matches": ["https://www.facebook.com/*"],
+           "js": [ "jquery-1.10.2.js", "fbeScrub.js"]
+	   }
+  ],
+  "minimum_chrome_version" : "6.0.0.0",
+  "manifest_version": 2
+}
+
